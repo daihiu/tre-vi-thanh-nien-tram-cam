@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+    <script>
+        $(document).ready(function () {
+            var ctx = $("#chart-line");
+            var myLineChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['2012 (15-24 tuổi)', '2013 (11-15 tuổi)', '2022 (13-17 tuổi)', '2022 (10-17 tuổi)'],
+                    datasets: [
+                        {
+                            data: [2.3, 26.3, 15.6, 1.6],
+                            label: "Dự định tự tử",
+                            borderColor: "#f7efd5",
+                            backgroundColor: '#f7efd5',
+                            fill: false
+                        },
+                        {
+                            data: [1, 3.8, 3.1, 0.2],
+                            label: "Đã cố gắng tự tử",
+                            borderColor: "#f5bad0",
+                            backgroundColor: '#f5bad0',
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'TỶ LỆ NGƯỜI MUỐN TỰ TỬ'
+                    },
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeInQuad'
+                    },
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                display: false
+                            }
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                display: true
+                            },
+                            ticks: {
+                                callback: function (value, index, values) {
+                                    return value + '%';
+                                }
+                            }
+                        }]
+                    },
+                }
+            });
+        });
+    </script>
+
+    <div class="card-body" style="height: 420px">
+        <div class="chartjs-size-monitor"
+            style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+            <div class="chartjs-size-monitor-expand"
+                style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0">
+                </div>
+            </div>
+            <div class="chartjs-size-monitor-shrink"
+                style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+            </div>
+        </div> <canvas id="chart-line" width="299" height="200" class="chartjs-render-monitor"
+            style="display: block; width: 299px; height: 200px;"></canvas>
+        <div style="justify-content: center; margin: 40px 30px 0 30px; font-style: italic; transform: translateY(-15%);">
+            <p>Từ các dữ liệu về mức độ phổ biến các vấn đề sức khỏe tâm thần trong
+                vị thành niên ở Việt Nam ở trên cho thấy sức khỏe tâm thần là một vấn đề sức khỏe
+                cộng đồng cần được các nhà lập kế hoạch và hoạch định chính sách quan tâm. Có khoảng
+                một phần năm (⅕) trẻ vị thành niên gặp vấn đề về sức khỏe tâm thần và một phần ba
+                mươi (1/30) đáp ứng các tiêu chí đối với một rối loạn tâm thần.
+            </p>
+            <p>
+                Chỉ một số ít vị thành niên có vấn đề về sức khỏe tâm thần nhận được dịch vụ chăm
+                sóc (8,4%). Để hỗ trợ trẻ vị thành niên, điều quan trọng là việc tầm soát sức khỏe
+                tâm thần phải được lồng ghép vào các dịch vụ y tế đa khoa hiện có, đồng thời cung
+                cấp giáo dục và đào tạo về sức khỏe tâm thần và lộ trình chuyển tuyến cho các bác sĩ
+                đa khoa.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

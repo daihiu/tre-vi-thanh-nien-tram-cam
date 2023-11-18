@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+    <script>
+        $(document).ready(function () {
+            var ctx = $("#chart-line");
+            var myLineChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['10-13 tuổi', '14-17 tuổi', '10-17 tuổi'],
+                    datasets: [
+                        {
+                            data: [21.4, 20.2, 20.8, 0],
+                            label: "Nam",
+                            borderColor: "#bef7db",
+                            backgroundColor: '#bef7db',
+                            fill: false
+                        },
+                        {
+                            data: [20.2, 25.3, 22.6],
+                            label: "Nữ",
+                            borderColor: "#f7e9be",
+                            fill: true,
+                            backgroundColor: '#f7e9be'
+
+                        },
+                        {
+                            data: [20.8, 22.7, 21.7],
+                            label: "Chung",
+                            borderColor: "#beeaf7",
+                            fill: false,
+                            backgroundColor: '#beeaf7'
+                        }
+                    ]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'TỶ LỆ MẮC CÁC VẤN ĐỀ VỀ SỨC KHỎE TÂM THẦN CỦA TRẺ 10-17 TUỔI (2022)'
+                    },
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                display: false
+                            }
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                display: true
+                            },
+                            ticks: {
+                                callback: function (value, index, values) {
+                                    return value + '%';
+                                }
+                            }
+                        }]
+                    },
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeInQuad'
+                    },
+                }
+            });
+        });
+    </script>
+    <!-- <div class="card-header">Bar chart</div> -->
+    <div class="card-body" style="height: 420px">
+        <div class="chartjs-size-monitor"
+            style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+            <div class="chartjs-size-monitor-expand"
+                style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0">
+                </div>
+            </div>
+            <div class="chartjs-size-monitor-shrink"
+                style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+            </div>
+        </div>
+        <canvas id="chart-line" width="299" height="200" class="chartjs-render-monitor"
+            style="display: block; width: 299px; height: 200px;"></canvas>
+        <div style="justify-content: center; margin: 30px 30px 0 30px; font-style: italic; transform: translateY(-25%);">
+            Không có sự khác biệt về tỷ lệ mắc giữa nam và nữ, hoặc giữa nhóm vị
+            thành niên theo độ tuổi. <b>Trong số trẻ vị thành niên có vấn đề về sức khỏe tâm
+                thần có 4,3% trẻ vị thành niên bị trầm cảm.</b>
+        </div>
+    </div>
+</body>
+
+</html>
