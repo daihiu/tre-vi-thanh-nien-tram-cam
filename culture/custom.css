@@ -4,5 +4,6 @@
 }
 
 .dai2{
-    height: 600px !important;
+    display: flex !important;
+    transform: translateY(-115px);
 }
