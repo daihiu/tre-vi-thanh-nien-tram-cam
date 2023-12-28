@@ -1,0 +1,52 @@
+.header-region-bgr{
+    /* set background with full size of image*/
+    background: url('../image-tram-cam/6225303882a82af673b9.jpg')
+        no-repeat 
+        center 
+        center 
+        fixed;
+}
+
+.white-text{
+    color: #fff;
+}
+
+.header-label{
+    font-size: 40px !important;
+}
+
+.header-margin-bot{
+    margin-bottom: 20px;
+}
+
+.region3-bgr{
+    background: url('../image-tram-cam/haisdhioashiodioasiohd.jpg')
+        no-repeat 
+        center 
+        center 
+        fixed; 
+    /* make it full of element */
+    background-size: cover;
+}
+
+.region5-bgr{
+    /* set half left is black, half right is image */
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../image-tram-cam/6580118da31d0b43520c.jpg')
+        no-repeat 
+        center 
+        center 
+        fixed;
+    /* make it full of element */
+    background-size: cover;
+}
+
+.footer-region-bgr{
+    /* get top of image */
+    background: url('../image-tram-cam/672af53247a2effcb6b3.jpg')
+        no-repeat 
+        center 
+        center 
+        fixed;
+    /* make it full of element */
+    background-size: cover;
+}
