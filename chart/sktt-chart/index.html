@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        canvas {
+            width: 1000px !important;
+            height: 600px !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -89,12 +95,11 @@
                 <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
             </div>
         </div>
-        <canvas id="chart-line" width="299" height="200" class="chartjs-render-monitor"
-            style="display: block; width: 299px; height: 200px;"></canvas>
+        <canvas id="chart-line" class="chartjs-render-monitor" style="display: block;"></canvas>
         <div
-            style="justify-content: center; margin: 30px 30px 0 30px; font-style: italic; transform: translateY(-25%); color: #999999; font-size: 14.5px;">
+            style="justify-content: center; margin: 30px 15% 0 0; font-style: italic; display: flex; color: #999999; font-size: 14.5px;">
             <p>Không có sự khác biệt về tỷ lệ mắc giữa nam và nữ, hoặc giữa nhóm vị
-                thành niên theo độ tuổi. <b>Trong số trẻ vị thành niên có vấn đề về sức khỏe tâm
+                thành niên theo độ tuổi. <br><b>Trong số trẻ vị thành niên có vấn đề về sức khỏe tâm
                     thần có 4,3% trẻ vị thành niên bị trầm cảm.</b></p>
         </div>
     </div>
